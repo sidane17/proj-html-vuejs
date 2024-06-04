@@ -1,34 +1,84 @@
 <script >
-// import store from "../"
-// export default{
-//     data(){
-//         return{
-//             store
-//         }
-//     },
+import store from "../data/store.js"
+import AppMainTop from "./AppMainTop.vue"
+
+export default{
+    components:{
+        AppMainTop
+    },
+    data(){
+        return{
+            store,
+
+            games:[{
+                name:"Assaaain creed",
+                url:"v-small1.png"
+            },{
+                name:"Call Of Deaudy",
+                url:"v-small2.png" 
+        }]
+           
+        }
+    },
+    methods:{
+        print(){
+            console.log(store);
+        },
+        next() {
+            this.games.push(this.games[0])
+            this.games.shift()
+        },
+        back() {
+            let lastImg = this.games[this.games.length - 1]
+            this.games.unshift(lastImg)
+            this.games.pop()
+        },
+        getImg(gameImg) {
+            let risultato = new URL(`../assets/${gameImg}`, import.meta.url);
+            return risultato.href;
+        }
+    }
   
-// }
-// </script>
+}
+</script>
 
 
 <template>
-    <div class=" container_sezione1">
-        <div class="container container_squad rounded">
-            <div class="card_squad col-2"></div>
+    <div class=" container_sezione1 ">
+        <div class="container container_squad rounded d-flex">
+            <div class="card_squad col-2">
+                <img src="../assets/1.png" alt="" width="calc(100%/6)">
+            </div>
+            <div class="card_squad col-2">
+                <img src="../assets/2.png" alt="" width="calc(100%/6)">
+            </div>
+            <div class="card_squad col-2">
+                <img src="../assets/3.png" alt="" width="calc(100%/6)">
+            </div>
+            <div class="card_squad col-2">
+                <img src="../assets/4.png" alt="" width="calc(100%/6)">
+            </div>
+            <div class="card_squad col-2">
+                <img src="../assets/5.png" alt="" width="calc(100%/6)">
+            </div>
+            <div class="card_squad col-2">
+                <img src="../assets/6.png" alt="" width="calc(100%/6)">
+            </div>
         </div>
-        <div class="sub_container w-100 mt-5 d-flex">
+        <div class="sub_container w-100 mt-5 d-flex container">
             <!-- sezione UNO-uno -->
-            <div class="col-6 border d-flex justify-content-center align-items-center">
-                <div class="container_img border d-flex justify-content-center align-items-center">
+            <div class="col-6  d-flex justify-content-center align-items-center">
+                <div class="container_img  d-flex justify-content-center align-items-center">
                     <div class="d-flex justify-content-center align-items-center" style="z-index: 1;">
-                        <img src="../assets/exprince.jpg" alt="" width="350px" style="aspect-ratio: 1/1;">
+                        <img src="../assets/exprince.jpg" alt="" width="300px" style="aspect-ratio: 1/1;">
                     </div>
-                    <div class="align-self-start justify-self-start sCube"><img src="../assets/shape2.png" alt="" width="200px"></div>
-                    <div class="align-self-end bCube"><img src="../assets/shape1.png" alt="" width="100px" style="z-index: 0;"></div>
+                    <div class=" sCube"><img src="../assets/shape1.png" alt="" width="200px"></div>
+                    <div class=" bCube"><img src="../assets/shape2.png" alt="" width="300px" style="z-index: 0;"></div>
+                    <div class="exp"><img src="../assets/exprience-shape.png" alt=""></div>
                 </div>
             </div>
             <!-- sezione UNO-due -->
-            <div class="col-6 border d-flex justify-content-center align-items-center flex-column">
+            <div class="col-6 d-flex justify-content-center align-items-center flex-column">
                 <p>12 Year Experience</p>
                 <h2> We are the best Gaming Company</h2>
                 <p class="m-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam, eaque porro aut numquam ad cumque accusamus voluptas, nemo at nesciunt nam in dolor soluta vitae, eum animi consequuntur ipsa ut.</p>
@@ -39,7 +89,7 @@
                     <li><i class="fa-regular fa-circle-check me-2 green"></i>Sed porttitor lectus nibh. Proin eget tortor risus.</li>
                 </ul>
                 <div class="d-flex text-black">
-                    <div class="p-2 b me-2 rounded">Discover more</div>
+                    <div class="p-3 b me-2 rounded d-flex justify-content-center align-items-center">Discover more <i class="fa-solid fa-arrow-right ms-2"></i></div>
                     <a href="#" class="a rounded-circle d-flex justify-content-center align-items-center"><i class="fa-solid fa-play"></i></a>
                 </div>
             </div>
@@ -55,44 +105,44 @@
 
         </div>
         <div class="col-6 d-flex flex-wrap">
-            <div class="cardGame d-flex align-items-center justify-content-center flex-column m-2 rounded">
+            <div class="cardGame d-flex align-items-center justify-content-center flex-column m-2 rounded" style="background-color:rgb(10, 169, 110) ; color:rgb(23, 30, 67);">
                 <div class="circle d-flex justify-content-center align-items-center flex-column">
-                    <img src="../assets/feature1.png" alt="" width="75px" height="75px">
+                    <img src="../assets/feature1.png" alt="" width="75px" height="75px" class="big">
                     
                 </div>
-                <span class=""><b>Live Streaming</b></span>
+                <span class="fs-4"><b>Live Streaming</b></span>
                 <p class="text-center">Nulla porttitor accusuam tincidunt.Pellentesque in.</p>
             </div>
             <div class="cardGame d-flex align-items-center justify-content-center flex-column m-2 rounded">
-                <div class="circle d-flex justify-content-center align-items-center flex-column">
-                    <img src="../assets/feature2.png" alt="" width="75px" height="75px">
+                <div class="circle d-flex justify-content-center align-items-center flex-column big">
+                    <img src="../assets/feature2.png" alt="" width="75px" height="75px" >
                     
                 </div>
-                <span class=""><b>Gaming News</b></span>
+                <span class="fs-4"><b>Gaming News</b></span>
                 <p class="text-center">Nulla porttitor accusuam tincidunt.Pellentesque in.</p>
             </div>
             <div class="cardGame d-flex align-items-center justify-content-center flex-column m-2 rounded"  >
-                <div class="circle d-flex justify-content-center align-items-center flex-column">
-                    <img src="../assets/feature3.png" alt="" width="75px" height="75px">
+                <div class="circle d-flex justify-content-center align-items-center flex-column big">
+                    <img src="../assets/feature3.png" alt="" width="75px" height="75px" >
                     
                 </div>
-                <span class=""><b>Great Tournament</b></span>
+                <span class="fs-4"><b>Great Tournament</b></span>
                 <p class="text-center">Nulla porttitor accusuam tincidunt.Pellentesque in.</p>
             </div>
             <div class="cardGame d-flex align-items-center justify-content-center flex-column m-2 rounded">
-                <div class="circle d-flex justify-content-center align-items-center flex-column">
-                    <img src="../assets/feature4.png" alt="" width="75px" height="75px">
+                <div class="circle d-flex justify-content-center align-items-center flex-column big">
+                    <img src="../assets/feature4.png" alt="" width="75px" height="75px" >
                     
                 </div>
-                <span class=""><b>Awward Ceremony</b></span>
+                <span class="fs-4"><b>Awward Ceremony</b></span>
                 <p class="text-center">Nulla porttitor accusuam tincidunt.Pellentesque in.</p>
             </div>
         </div>
     </div>
     </div>
     <!-- sezione TRE -->
-    <div class="container_sezione3">
-        <div class="container d-flex">
+    <div class="container_sezione3" >
+        <div class="container d-flex align-items-center">
             <div class="containerVideo col-6 d-flex flex-column justify-content-center align-items-center  ">
                 <div class="play p-4 bg-">
                     <i class="fa-solid fa-play text-light fs-4"></i>
@@ -100,12 +150,18 @@
                 <p class="text-light mt-2"><b>Call Of Deauty</b></p>
             </div>
             <div class="col-6 d-flex justify-content-center ms-4 flex-column">
-                <p class="text-success fs-5"><b>Live Streaming</b></p>
-                <h2 class="text-light ">Checkout Our Live Streaming</h2>
-                <div class="containerCarousel">
+                <!-- <p class="text-success fs-5"><b>Live Streaming</b></p>
+                <h2 class="text-light ">Checkout Our Live Streaming</h2> -->
+                <AppMainTop titleSection="Live streming" title="Checkout Our Live Streaming" :arrayGames="games"/>
+                <div class="containerCarousel d-flex">
+                    <div v-for="game in games" class="cardSlide"  >
+                        <img  :src="getImg(game.url)" alt="" style="width:20rem;  margin-bottom:1rem">
+                        <span ><b>{{ game.name }}</b></span>
+                        <p class="mt-1">Vestibulum ac diamo sit amet quam vehicula elementum sed sit armet dui</p>
+                    </div>
                     <!-- carousel -->
 
-                    <div id="carouselExample" class="carousel slide" style="height: 100%;">
+                    <!-- <div id="carouselExample" class="carousel slide" style="height: 100%;">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                             <img src="../assets/v-small2.png" class="h " alt="">
@@ -123,11 +179,8 @@
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Next</span>
                             </button>
-                        </div>
-
-                     
+                        </div> -->
                 </div> 
-                
             </div>
         </div>
     </div>
@@ -139,45 +192,49 @@
 }
 li{
     list-style: none;
+    
 }
 .green{
     color: green;
 }
+
 .a{
+    
  width:3rem;
  height: 3rem;
- background-color: greenyellow;
+ background-color: rgb(7, 203, 127);
+ color:  rgb(24, 25, 53);
 }
 .b{
  width:fit-content;
  height: 3rem;
- background-color: greenyellow;
+ background-color: rgb(7, 203, 127);
 }
 .sub_container{
-    border-style: dashed;
+    
     height: 60%;
     color: white;
 }
 .container_sezione1{
     width: 100%;
-    height: 100vh;
-    background-color: rgb(48, 48, 101);
+    min-height: 100vh;
+    height: fit-content;
+    background-color: rgb(24, 25, 53)
 }
 .container_squad{
+    margin-top: -100px;
     height: 10rem;
-    background-color: blueviolet;
+    background-color: rgb(33, 32, 71);
 }
 .card_squad{
-    border-style: dashed;
+    
     height: 100%;
 }
-.border{
-    border-style: dashed;
-}
+
 /* sezione uno-due */
 .container_img{
     aspect-ratio: 1/1;
-    height: 90%;
+    height: 100%;
     position: relative;
 }
 .bCube{
@@ -190,12 +247,19 @@ li{
     right: 0;
     bottom: 0;
 }
+.exp{
+    
+    position: absolute;
+    right: 350px;
+    top:10px;
+}
 /* SEZIONE 2  */
 .container_sezione2{
-    height: 100vh;
+    min-height: 100vh;
+    height: fit-content;
     width: 100%;
     background-image: url(../assets/Vector.png);
-    background-color: rgb(47, 47, 86) ;
+    background-color: rgb(25, 24, 67);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -204,10 +268,18 @@ li{
 .cardGame{
     width: 17rem ;
     aspect-ratio: 1/1;
+    color: white;
+    background-color: rgb(52, 50, 134);
     
-    background-color: rgb(111, 229, 65);
     
-    
+}
+.cardGame:hover{
+    background-color: rgb(10, 169, 110);
+    color:rgb(47, 47, 86);
+}
+.cardGame:hover .big{
+    transition: 0.2s;
+ transform: scale(1.1);
 }
 .circle{
     width: 7rem;
@@ -218,6 +290,8 @@ li{
 /* sezione TRE */
 .container_sezione3 {
     height: 100vh;
+    height: fit-content;
+    
     width: 100%;
     background-image: url(../assets/v-bg.png);
     background-color: rgb(47, 47, 86) ;
@@ -226,7 +300,7 @@ li{
     align-items: center;
 }
 .containerVideo{
-    aspect-ratio: 4/3;
+    height: 35rem;
     background-image: url(../assets/v-1.png);
     background-size: cover ;
     background-position: center;
@@ -235,7 +309,7 @@ li{
 }
 .containerSlider{
     aspect-ratio: 4/3;
-    border-style: dashed;
+  
 }
 .play{
     aspect-ratio: 1/1;
@@ -247,8 +321,12 @@ li{
     align-items: center;
 }
 .containerCarousel{
-    height: 15rem;
-    width: 50%;
-    border-style:dashed;
+    height: fit-content;
+    width: fit-content;
+  
+}
+.cardSlide{
+    margin: 1rem;
+    color: white;
 }
 </style>
