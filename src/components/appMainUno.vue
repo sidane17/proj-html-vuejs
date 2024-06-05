@@ -44,6 +44,7 @@ export default{
 
 
 <template>
+    <!-- sezione UNO -->
     <div class=" container_sezione1 ">
         <div class="container container_squad rounded d-flex">
             <div class="card_squad col-2">
@@ -185,7 +186,7 @@ export default{
         </div>
     </div>
 </template>
-<style>
+<style scoped>
 .h{
     width:20rem ;
     border-radius:20px
@@ -219,10 +220,9 @@ li{
     width: 100%;
     min-height: 100vh;
     height: fit-content;
-    background-color: rgb(24, 25, 53)
+    background-color: rgb(24, 25, 53);
 }
 .container_squad{
-    margin-top: -100px;
     height: 10rem;
     background-color: rgb(33, 32, 71);
 }
