@@ -69,6 +69,7 @@ export default{
         <div class="teamCard" v-for="team in teams"> 
              <div class="containerImg">
                 <img :src="getImg(team.urlImg)" alt="">
+                
             </div>
             <span class="fs-5"><b>{{ team.name }}</b></span>
             <p>{{team.ruolo}}</p>
@@ -103,11 +104,14 @@ export default{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 20rem;
+    height: fit-content;
     color: white;
-    width: 15rem;
+    width: 20rem;
     margin: 1rem;
     background-color: rgb(21, 34, 87);
+}
+.teamCard:hover {
+    background-color: rgb(5, 203, 125);
 }
 .containerImg{
     height: fit-content;
