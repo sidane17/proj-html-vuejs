@@ -70,6 +70,12 @@ export default{
              <div class="containerImg">
                 <img :src="getImg(team.urlImg)" alt="">
                 
+                <div class="plus d-flex gap-3">
+                    <div class="social"><i class="fa-brands fa-facebook"></i></div>
+                    <div class="social"><i class="fa-brands fa-twitter"></i></div>
+                    <div class="social"><i class="fa-brands fa-linkedin"></i></div>
+                    <div class="social"><i class="fa-brands fa-instagram"></i></div>
+                </div>
             </div>
             <span class="fs-5"><b>{{ team.name }}</b></span>
             <p>{{team.ruolo}}</p>
@@ -81,6 +87,29 @@ export default{
 </template>
 
 <style>
+/* inizio */
+.plus{
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+   opacity: 0; 
+   
+}
+.teamCard:hover .plus{
+    opacity: 1; 
+}
+.social{
+    width: 2rem;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+    background-color: rgb(32, 33, 70);
+    border-radius: 50%;
+    
+}
+/* fine */
 .container_7{
     height: 100vh;
     background-color:rgb(25, 25, 53) ;
@@ -116,10 +145,8 @@ export default{
 .containerImg{
     height: fit-content;
     width: 100%;
-    
-    
+    position: relative;
     margin-bottom: 1rem;
-
 }
 img{
     width: 100%;
