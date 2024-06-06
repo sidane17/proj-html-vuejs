@@ -265,7 +265,7 @@ li{
 }
 /* SEZIONE 2  */
 .container_sezione2{
-    min-height: 100vh;
+    min-height: 130vh;
     height: fit-content;
     width: 100%;
     background-image: url(../assets/Vector.png);
