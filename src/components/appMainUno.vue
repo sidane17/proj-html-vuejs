@@ -47,23 +47,23 @@ export default{
 <template>
     <!-- sezione UNO -->
     <div class=" container_sezione1 ">
-        <div class="container container_squad rounded d-flex">
-            <div class="card_squad col-2">
+        <div class="container container_squad rounded d-flex ">
+            <div class="card_squad col-2 d-flex justify-content-center align-items-center">
                 <img src="../assets/1.png" alt="" width="calc(100%/6)">
             </div>
-            <div class="card_squad col-2">
+            <div class="card_squad col-2 d-flex justify-content-center align-items-center">
                 <img src="../assets/2.png" alt="" width="calc(100%/6)">
             </div>
-            <div class="card_squad col-2">
+            <div class="card_squad col-2 d-flex justify-content-center align-items-center">
                 <img src="../assets/3.png" alt="" width="calc(100%/6)">
             </div>
-            <div class="card_squad col-2">
+            <div class="card_squad col-2 d-flex justify-content-center align-items-center">
                 <img src="../assets/4.png" alt="" width="calc(100%/6)">
             </div>
-            <div class="card_squad col-2">
+            <div class="card_squad col-2 d-flex justify-content-center align-items-center">
                 <img src="../assets/5.png" alt="" width="calc(100%/6)">
             </div>
-            <div class="card_squad col-2">
+            <div class="card_squad col-2 d-flex justify-content-center align-items-center">
                 <img src="../assets/6.png" alt="" width="calc(100%/6)">
             </div>
         </div>
