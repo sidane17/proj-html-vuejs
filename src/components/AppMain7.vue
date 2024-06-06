@@ -94,6 +94,7 @@ export default{
   left: 50%;
   transform: translate(-50%, -60%);
    opacity: 0; 
+   transition: .6s ease;
    
 }
 .teamCard:hover .plus{
