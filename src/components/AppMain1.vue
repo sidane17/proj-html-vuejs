@@ -164,6 +164,7 @@ li{
     background-color: rgb(48, 48, 101);
 }
 .container_squad{
+    
     height: 10rem;
     background-color: blueviolet;
 }

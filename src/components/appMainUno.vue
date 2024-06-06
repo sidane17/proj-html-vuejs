@@ -37,7 +37,8 @@ export default{
             let risultato = new URL(`../assets/${gameImg}`, import.meta.url);
             return risultato.href;
         }
-    }
+    },
+    
   
 }
 </script>
@@ -146,7 +147,8 @@ export default{
         <div class="container d-flex align-items-center">
             <div class="containerVideo col-6 d-flex flex-column justify-content-center align-items-center  ">
                 <div class="play p-4 bg-">
-                    <i class="fa-solid fa-play text-light fs-4"></i>
+                    <!-- <i class="fa-solid fa-play text-light fs-4"></i> -->
+                    <a href="#"><i class="fas fa-play"></i></a><span></span>
                 </div>
                 <p class="text-light mt-2"><b>Call Of Deauty</b></p>
             </div>
@@ -221,8 +223,16 @@ li{
     min-height: 100vh;
     height: fit-content;
     background-color: rgb(24, 25, 53);
+    position: relative;
+    display: flex;
+    align-items: center;
 }
 .container_squad{
+    position: absolute;
+    top:1%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    z-index: 2;
     height: 10rem;
     background-color: rgb(33, 32, 71);
 }
@@ -313,8 +323,8 @@ li{
 }
 .play{
     aspect-ratio: 1/1;
-    width: 5rem;
-    background-color: rgb(43, 136, 68);
+    /* width: 5rem; */
+    /* background-color: rgb(43, 136, 68); */
     border-radius: 50% ;
     display: flex;
     justify-content: center;
@@ -329,4 +339,70 @@ li{
     margin: 1rem;
     color: white;
 }
+a {
+            text-decoration: none;
+            aspect-ratio: 1/1;
+            width: 5rem;
+            background-color: rgb(43, 136, 68);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: x-large;
+            
+            color: aliceblue;
+            border-radius: 50%;
+            padding: 15px;
+            position: relative;
+        }
+
+        a::after {
+            position: absolute;
+            content: '';
+            bottom: -7px;
+            top: -7px;
+            left: -7px;
+            right: -7px;
+            background-color: transparent;
+            border-radius: 50%;
+            border: 4px solid 4px solid #20d12f;
+            margin: 0px;
+            opacity: 1;
+            transform-origin: center;
+            animation: anim 800ms linear infinite;
+        }
+
+        a::before {
+            position: absolute;
+            content: '';
+            bottom: -7px;
+            top: -7px;
+            left: -7px;
+            right: -7px;
+            background-color: transparent;
+            border-radius: 50%;
+            border: 4px solid #20d12f;
+            margin: 0px;
+            opacity: 0.8;
+            transform-origin: center;
+            animation: anim 1000ms linear 1000ms infinite;
+        }
+
+        @keyframes anim {
+            from {
+                margin: 0px;
+                opacity: 1;
+            }
+
+            to {
+                margin: -15px;
+                opacity: 0;
+            }
+        }
+
+        /* span {
+            color: #fff;
+            font-family: sans-serif;
+            font-weight: 600;
+            margin-left: 20px;
+        }  */
 </style>
