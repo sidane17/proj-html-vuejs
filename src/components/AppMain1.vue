@@ -132,7 +132,7 @@
         </div>
     </div>
 </template>
-<style>
+<style scoped>
 .h{
     width:20rem ;
     border-radius:20px
