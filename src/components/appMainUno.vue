@@ -251,7 +251,7 @@ li{
 }
 .container_sezione1{
     width: 100%;
-    min-height: 100vh;
+    min-height: 120vh;
     height: fit-content;
     background-color: rgb(24, 25, 53);
     position: relative;
@@ -299,7 +299,7 @@ li{
 }
 /* SEZIONE 2  */
 .container_sezione2{
-    min-height: 50vh;
+    min-height: 130vh;
     
     width: 100%;
     background-image: url(../assets/Vector.png);
@@ -334,7 +334,7 @@ li{
 /* sezione TRE */
 .container_sezione3 {
     
-    height: fit-content;
+    height: 110vh;
     /* padding-top:5rem;
     padding-bottom:5rem; */
     width: 100%;
