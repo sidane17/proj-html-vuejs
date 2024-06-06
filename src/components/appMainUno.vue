@@ -334,7 +334,7 @@ li{
 /* sezione TRE */
 .container_sezione3 {
     
-    height: 110vh;
+    height: 120vh;
     /* padding-top:5rem;
     padding-bottom:5rem; */
     width: 100%;
