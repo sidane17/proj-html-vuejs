@@ -85,7 +85,7 @@ export default{
             <div class="f w-100">
                 <div class="w-50 d-flex ">
                     <div class="col-8 d-flex align-items-center justify-content-between fs-6">
-                        <span><b>Copiright © RaxG| Designed By</b><b class="text-success">NextGenerationDev</b></span>
+                        <span><b>Copiright © RaxG| Designed By</b><b class="text-success"> NextGenerationDev</b></span>
                     </div>
                 </div>
                 <div class="col-3 d-flex align-items-center justify-content-evenly  ">
