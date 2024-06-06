@@ -148,7 +148,7 @@ export default{
             <div class="containerVideo col-6 d-flex flex-column justify-content-center align-items-center  ">
                 <div class="play p-4 bg-">
                     <!-- <i class="fa-solid fa-play text-light fs-4"></i> -->
-                    <a href="#"><i class="fas fa-play"></i></a><span></span>
+                    <a href="#" id="a"><i class="fas fa-play"></i></a><span></span>
                 </div>
                 <p class="text-light mt-2"><b>Call Of Deauty</b></p>
             </div>
@@ -339,7 +339,7 @@ li{
     margin: 1rem;
     color: white;
 }
-a {
+#a {
             text-decoration: none;
             aspect-ratio: 1/1;
             width: 5rem;
@@ -355,7 +355,7 @@ a {
             position: relative;
         }
 
-        a::after {
+        #a::after {
             position: absolute;
             content: '';
             bottom: -7px;
@@ -371,7 +371,7 @@ a {
             animation: anim 800ms linear infinite;
         }
 
-        a::before {
+        #a::before {
             position: absolute;
             content: '';
             bottom: -7px;
