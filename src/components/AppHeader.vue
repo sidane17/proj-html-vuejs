@@ -320,7 +320,7 @@ export default {
 
     .banner-social {
         position: absolute;
-        left: -20%;
+        
         transform: translate(-50%, 150%);
     }
 
