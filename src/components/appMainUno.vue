@@ -113,6 +113,7 @@ export default{
                 <div class="d-flex text-black">
                     <div class="p-3 b me-2 rounded d-flex justify-content-center align-items-center">Discover more <i class="fa-solid fa-arrow-right ms-2"></i></div>
                     <a href="#" class="a rounded-circle d-flex justify-content-center align-items-center"><i class="fa-solid fa-play"></i></a>
+                    
                 </div>
             </div>
         </div>

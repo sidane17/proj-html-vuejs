@@ -75,7 +75,7 @@ export default {
             <AppMainTop titleSection="Trending Games" title="Choose Who Is The Best In World!"
                 :arrayGames="nextMatches" />
             <div class="row justify-content-around">
-                <div v-for="nxtMatch, i in nextMatches" v-show="i < 2" class="col-4 p-4 rounded" id="infoMatch">
+                <div v-for="nxtMatch, i in nextMatches" v-show="i < 3" class="col-4 p-4 rounded" id="infoMatch">
                     <div class="text-end position-relative" id="containerImgMatch">
                         <img :src="getImg(nxtMatch.squad.imgBack)" class="bg-opacity-75" id="bgImg" alt="">
                         <img :src="getImg(nxtMatch.squad.img)"

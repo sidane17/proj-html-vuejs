@@ -7,6 +7,8 @@ import AppMain5 from './components/AppMain5.vue';
 import AppMain6 from './components/AppMain6.vue';
 import AppMain7 from './components/AppMain7.vue';
 import AppMain8 from './components/AppMain8.vue';
+import AppMain9 from './components/AppMain9.vue';
+import AppMain10 from './components/AppMain10.vue';
 import footerVue from './components/footer.vue';
 export default{
   components:{
@@ -18,6 +20,8 @@ export default{
         AppMain6,
         AppMain7,
         AppMain8,
+        AppMain9,
+        AppMain10,
         footerVue
   }
 }
@@ -32,6 +36,8 @@ export default{
     <AppMain6 />
     <AppMain7 />
     <AppMain8 />
+    <AppMain9 />
+    <AppMain10 />
     <footerVue />
    
 </template>
